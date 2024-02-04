@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9f1f282696ee1134fb8c2b8f07e2fb91
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Scripts/Choices/ConversationChoices.cs
+  uploadId: 502459

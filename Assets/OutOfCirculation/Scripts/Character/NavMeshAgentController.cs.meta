@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 24f4edca5dd3bf741b9a02d14ea45e72
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - navMeshAgent: {instanceID: 0}
+  - cam: {instanceID: 0}
+  - MoveIndicatorPrefab: {fileID: 372017713604154816, guid: 41440240e4ac4f64bad54bbc564f7d8b,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Scripts/Character/NavMeshAgentController.cs
+  uploadId: 502459

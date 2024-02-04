@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fd01c56c192115741b442cebb50be4cd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Data/Items/TabletPad.asset
+  uploadId: 502459

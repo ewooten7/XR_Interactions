@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0b208cb80de40eb40812ca946211d296
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Scripts/UI/DialogWindow/UIDialogueWindow.cs
+  uploadId: 502459

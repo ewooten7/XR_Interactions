@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0a4b6ac1599c3414eabf393dd9ccd801
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/SubtitleCanvas.prefab
+  uploadId: 502459

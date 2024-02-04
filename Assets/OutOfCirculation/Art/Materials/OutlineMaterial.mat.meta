@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 790c1b2530a90fd499ecc79c9501134f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Art/Materials/OutlineMaterial.mat
+  uploadId: 502459

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 89f4a0ae7ea3fa84ea56c91291d7bd87
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/UAP/Resources/Accessibility Manager.prefab
+  uploadId: 502459

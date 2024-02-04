@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 15d1ead4a51acbd4ebb30d24e469210b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Scripts/SceneData/SpawnSystem.cs
+  uploadId: 502459

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e4a0c1310c7fdb54ebe119e9ae762ca8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/UI/Theme/Default/LabelPrefab.prefab
+  uploadId: 502459

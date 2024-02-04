@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: aa121fc5bbbad3c4db5ba90056690f16
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Scripts/SceneData/SpawnPoint.cs
+  uploadId: 502459

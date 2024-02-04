@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6e0a875ea63df4f43bf9948ebe6e0f80
+timeCreated: 1458508474
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/UAP/Scripts/UI Components/AccessibleTextEdit.cs
+  uploadId: 502459

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c884777f5c27be241aeaadcb3c3199cc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/Item3DPrefab/MemoVisualPrefab.prefab
+  uploadId: 502459

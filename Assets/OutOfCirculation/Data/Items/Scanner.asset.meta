@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e8cd81b7a03c5e844aa878fa6232f567
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Data/Items/Scanner.asset
+  uploadId: 502459

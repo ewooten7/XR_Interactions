@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 98bd2baf6b5cdba4db648a63162a54d5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/UI/Theme/Default/InputButtonPrefab.prefab
+  uploadId: 502459

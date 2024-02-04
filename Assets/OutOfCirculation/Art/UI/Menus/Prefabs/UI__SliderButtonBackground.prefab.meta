@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 61720efc82de2b6468ee8c2c79dc23e4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Art/UI/Menus/Prefabs/UI__SliderButtonBackground.prefab
+  uploadId: 502459

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4a051dce286d0744789e59c0636bdcae
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/UI/DialogEntry.prefab
+  uploadId: 502459

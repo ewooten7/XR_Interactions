@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 429f2c5c988bbd7468cca273d7524d17
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 23800000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Scene/WitchShop/NavMesh.asset
+  uploadId: 502459

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f5824a259dc2004489715d49f2e1a505
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Data/Items/Shop_Obj2_Titration.asset
+  uploadId: 502459

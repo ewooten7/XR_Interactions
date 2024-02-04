@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 84fadcc5dd0a4294fad9c3101e622556
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Scene/Lib/LightingData.asset
+  uploadId: 502459

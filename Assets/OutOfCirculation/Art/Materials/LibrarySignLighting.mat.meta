@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b01f7bb16b0a98d468fe214ce6890f5f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Art/Materials/LibrarySignLighting.mat
+  uploadId: 502459

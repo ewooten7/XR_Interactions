@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c657e092a04369a45b1aebf58384b1f9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Art/Materials/Street_Windows_On.mat
+  uploadId: 502459

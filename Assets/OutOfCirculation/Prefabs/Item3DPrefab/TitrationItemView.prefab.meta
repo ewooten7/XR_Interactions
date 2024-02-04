@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a6641055e2ef1ce46b00440bcdcf35c0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/Item3DPrefab/TitrationItemView.prefab
+  uploadId: 502459

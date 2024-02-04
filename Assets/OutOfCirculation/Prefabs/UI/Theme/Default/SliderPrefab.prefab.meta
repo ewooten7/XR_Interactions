@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 890c8d5d31ca0ab41ace9d023cc00681
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/UI/Theme/Default/SliderPrefab.prefab
+  uploadId: 502459

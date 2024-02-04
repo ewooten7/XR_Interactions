@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4128aea89c1d4e04e8d74553f68aad8b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/Item3DPrefab/SnackItem.prefab
+  uploadId: 502459

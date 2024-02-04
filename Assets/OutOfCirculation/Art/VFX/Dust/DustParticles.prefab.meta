@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 375c807b465f68d4889b7ba4d5014197
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Art/VFX/Dust/DustParticles.prefab
+  uploadId: 502459

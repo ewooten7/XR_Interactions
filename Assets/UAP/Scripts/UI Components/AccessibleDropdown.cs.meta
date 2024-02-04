@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3b364a9c32985f6429906a2c32464c4b
+timeCreated: 1458606951
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/UAP/Scripts/UI Components/AccessibleDropdown.cs
+  uploadId: 502459

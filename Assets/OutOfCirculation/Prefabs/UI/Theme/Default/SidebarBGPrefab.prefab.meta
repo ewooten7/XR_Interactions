@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f7fd806f4e3b0294290b4a25ba5a1161
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/UI/Theme/Default/SidebarBGPrefab.prefab
+  uploadId: 502459

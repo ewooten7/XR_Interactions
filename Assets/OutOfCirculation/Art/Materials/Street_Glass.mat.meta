@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5fcb564079a2cb54ca655432bab96bbc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Art/Materials/Street_Glass.mat
+  uploadId: 502459

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8660ae255ac33404a94934c0403879f8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/OutOfCirculation/Prefabs/Item3DPrefab/PadVisualPrefab.prefab
+  uploadId: 502459

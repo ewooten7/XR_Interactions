@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: de0815a0d83b3584bb8248534536d460
+timeCreated: 1568566981
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/UAP/Plugins/CustomTTS/WebSpeechAPI_TTS.cs
+  uploadId: 502459

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f77df02a5a876f04ca846e1f4ba372a7
+timeCreated: 1492011956
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 223056
+  packageName: 'Practical Game Accessibility: Case study'
+  packageVersion: 1.0
+  assetPath: Assets/UAP/Editor/UAP_Version.txt
+  uploadId: 502459
