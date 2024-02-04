@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 27
-  productGUID: 00000000000000000000000000000000
+  productGUID: d5edd37b0841ef347b64e8236f3b86ee
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -786,7 +786,7 @@ PlayerSettings:
   cloudProjectId: 7a8b8ab7-719a-48f0-a672-002b211a247f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: XR_Interactions 2024-02-03_22-23-09
   organizationId: mel0dys
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
