@@ -17,4 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/OutOfCirculation/Scene/Lib.unity
     guid: a4fc3ce79878d9247ac1ecaf111f9f39
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6c14ab8a54fea5e4598eea0ae42091a5, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7cb9a86673884fd4fa2825a01d710431, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 5e1a7f9e46fa9a6409253e0be5decc09, type: 2}
+  m_UseUCBPForAssetBundles: 0
