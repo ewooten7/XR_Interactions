@@ -13,6 +13,7 @@ public class DrawerInteractable : XRGrabInteractable
     private const string grabLayer = "Grab";
     private bool isGrabbed;
     private Vector3 limitPositions;
+    [SerializeField] float drawerLimitZ = 0.8f;
     [SerializeField] private Vector3 limitDistances = new Vector3(.02f,.02f,0);
     void Start()
     {   
@@ -76,6 +77,22 @@ public class DrawerInteractable : XRGrabInteractable
         else if(transform.localPosition.y >= limitPositions.y + limitDistances.y ||
             transform.localPosition.y <= limitPositions.y - limitDistances.y)
         {
+            ChangeLayerMask(defaultLayer);
+        }
+        else if(drawerTransform.localPosition.z <= limitPositions.z - limitDistances.z)
+        {
+            isGrabbed = false;
+            drawerTransform.localPosition = limitPositions;
+            ChangeLayerMask(defaultLayer);
+        }
+        else if(drawerTransform.localPosition.z >= drawerLimitZ + limitDistances.z)
+        {
+            isGrabbed = false;
+            drawerTransform.localPosition = new Vector3(
+                drawerTransform.localPosition.x,
+                drawerTransform.localPosition.y,
+                drawerLimitZ
+            );
             ChangeLayerMask(defaultLayer);
         }
     }
