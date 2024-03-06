@@ -7,6 +7,8 @@ public class DrawerInteractable : XRGrabInteractable
 {
     [SerializeField] Transform drawerTransform;
     [SerializeField] XRSocketInteractor keySocket;
+
+    [SerializeField] GameObject keyIndicatorLight;
     [SerializeField] bool isLocked;
     private Transform parentTransform;
     private const string defaultLayer = "Default";
@@ -28,6 +30,10 @@ public class DrawerInteractable : XRGrabInteractable
     private void OnDrawerLocked(SelectExitEventArgs arg0)
     {
         isLocked = true;
+        if(keyIndicatorLight != null)
+        {
+            keyIndicatorLight.SetActive(false);
+        }
         Debug.Log("****DRAWER LOCKED");
     }
     private void OnDrawerUnlocked(SelectEnterEventArgs arg0)
