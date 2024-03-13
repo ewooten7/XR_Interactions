@@ -8,9 +8,16 @@ public class CombinationLock : MonoBehaviour
 {
     [SerializeField] TMP_Text userInputText;
     [SerializeField] XRButtonInteractable[] comboButtons;
+    [SerializeField] bool isLocked;
+    [SerializeField] int[] comboValues = new int [3];
+    [SerializeField] int[] inputValues;
+    private int maxButtonPresses;
+    private int buttonPresses;
     
     void Start()
     {
+        maxButtonPresses = comboValues.Length;
+        inputValues = new int[comboValues.Length];
         userInputText.text = "";
         for (int i=0; i< comboButtons.Length; i++)
         {
@@ -33,5 +40,5 @@ public class CombinationLock : MonoBehaviour
             }
         }
     }
-    
+
 }
