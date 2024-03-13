@@ -5,13 +5,27 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CombinationLock : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] XRButtonInteractable[] comboButtons;
     void Start()
     {
+        for (int i=0; i< comboButtons.Length; i++)
+        {
+            comboButtons[i].selectEntered.AddListener(OnComboButtonPressed);
+        }
         
     }
 
-    // Update is called once per frame
+    private void OnComboButtonPressed(SelectEnterEventArgs arg0)
+    {
+        for (int i = 0; i < comboButtons.Length; i++)
+        {
+            if(arg0.interactableObject.transform.name == comboButtons[i].transform.name)
+            {
+                
+            }
+        }
+    }
+
     void Update()
     {
         
