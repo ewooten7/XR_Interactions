@@ -28,6 +28,12 @@ public class CombinationLock : MonoBehaviour
 
     private void OnComboButtonPressed(SelectEnterEventArgs arg0)
     {
+        if(buttonPresses >= maxButtonPresses) //TOO MANY BUTTON PRESS CHECK
+        {
+
+        }
+        else
+        {
         for (int i = 0; i < comboButtons.Length; i++)
         {
             if(arg0.interactableObject.transform.name == comboButtons[i].transform.name)
@@ -38,6 +44,8 @@ public class CombinationLock : MonoBehaviour
             {
                 comboButtons[1].ResetColor();
             }
+        }
+        buttonPresses++;
         }
     }
 
