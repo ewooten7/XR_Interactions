@@ -9,22 +9,16 @@ using UnityEngine.UI;
 public class XRButtonInteractable : XRSimpleInteractable
 {
     [SerializeField] Image buttonImage;
-    [SerializeField] Color[] buttonColors = new Color[4];
 
-    private Color normalColor;
-    private Color highlightedColor;
-    private Color pressedColor;
-    private Color selectedColor;
+    [SerializeField] private Color normalColor;
+    [SerializeField] private Color highlightedColor;
+    [SerializeField] private Color pressedColor;
+    [SerializeField] private Color selectedColor;
 
     private bool isPressed;
     void Start()
     {
-        normalColor = buttonColors[0];
-        highlightedColor = buttonColors[1];
-        pressedColor = buttonColors[2];
-        selectedColor = buttonColors[3];
-
-        buttonImage.color = normalColor;
+        ResetColor();
     }
 
     protected override void OnHoverEntered(HoverEnterEventArgs args)
@@ -54,8 +48,8 @@ public class XRButtonInteractable : XRSimpleInteractable
         buttonImage.color = selectedColor;
     }
 
-    void Update()
+    public void ResetColor()
     {
-        
+        buttonImage.color = normalColor;
     }
 }

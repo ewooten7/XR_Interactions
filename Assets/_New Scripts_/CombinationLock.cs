@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class CombinationLock : MonoBehaviour
 {
+    [SerializeField] TMP_Text userInputText;
     [SerializeField] XRButtonInteractable[] comboButtons;
+    
     void Start()
     {
+        userInputText.text = "";
         for (int i=0; i< comboButtons.Length; i++)
         {
             comboButtons[i].selectEntered.AddListener(OnComboButtonPressed);
@@ -21,13 +25,13 @@ public class CombinationLock : MonoBehaviour
         {
             if(arg0.interactableObject.transform.name == comboButtons[i].transform.name)
             {
-                
+                userInputText.text = i.ToString();
+            }
+            else
+            {
+                comboButtons[1].ResetColor();
             }
         }
     }
-
-    void Update()
-    {
-        
-    }
+    
 }
