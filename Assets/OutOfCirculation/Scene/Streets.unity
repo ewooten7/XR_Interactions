@@ -7493,7 +7493,6 @@ GameObject:
   - component: {fileID: 332176078}
   - component: {fileID: 332176077}
   - component: {fileID: 332176076}
-  - component: {fileID: 332176080}
   - component: {fileID: 332176075}
   - component: {fileID: 332176079}
   m_Layer: 0
@@ -7619,110 +7618,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &332176080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332176074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a94dd4bb4494fc642bdac8dd45d78191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
-  m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 2
-  m_DistanceCalculationMode: 1
-  m_SelectMode: 0
-  m_FocusMode: 1
-  m_CustomReticle: {fileID: 0}
-  m_AllowGazeInteraction: 0
-  m_AllowGazeSelect: 0
-  m_OverrideGazeTimeToSelect: 0
-  m_GazeTimeToSelect: 0.5
-  m_OverrideTimeToAutoDeselectGaze: 0
-  m_TimeToAutoDeselectGaze: 3
-  m_AllowGazeAssistance: 0
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstFocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastFocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_StartingInteractionStrengthFilters: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-  positionLimits: {x: 0, y: 0, z: 0}
-  isLocked: 0
 --- !u!1001 &334459227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42155,7 +42050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &477069730271310882
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42272,9 +42167,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3073757080062359820}
   serializedVersion: 2
-  m_LocalRotation: {x: -8.6593495e-17, y: 0.71202594, z: 8.6593495e-17, w: 0.7021532}
-  m_LocalPosition: {x: 0.060979366, y: 0, z: 0.4852105}
-  m_LocalScale: {x: 0.06000001, y: 0.060000002, z: 0.06000001}
+  m_LocalRotation: {x: -8.6593475e-17, y: 0.7120259, z: 8.6593475e-17, w: 0.7021532}
+  m_LocalPosition: {x: 0.104000404, y: 0, z: 0.39135462}
+  m_LocalScale: {x: 0.060000032, y: 0.060000002, z: 0.060000032}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 44365409892098190}
@@ -42957,9 +42852,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6976551125137186147}
   serializedVersion: 2
-  m_LocalRotation: {x: -8.621129e-17, y: 0.77051324, z: 8.621129e-17, w: 0.637424}
-  m_LocalPosition: {x: -0.063652754, y: 0, z: 0.48599997}
-  m_LocalScale: {x: 0.060000014, y: 0.060000002, z: 0.060000014}
+  m_LocalRotation: {x: -8.6211285e-17, y: 0.77051324, z: 8.6211285e-17, w: 0.6374241}
+  m_LocalPosition: {x: -0.104000285, y: 0, z: 0.41200072}
+  m_LocalScale: {x: 0.06000001, y: 0.060000002, z: 0.06000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 44365409892098190}
@@ -44223,6 +44118,7 @@ GameObject:
   - component: {fileID: 684349516715314476}
   - component: {fileID: 4304247800853745257}
   - component: {fileID: 7580482390936518055}
+  - component: {fileID: 7580482390936518056}
   m_Layer: 0
   m_Name: 'leftClosedCol '
   m_TagString: Untagged
@@ -47284,6 +47180,7 @@ GameObject:
   - component: {fileID: 1468637543569312606}
   - component: {fileID: 6940427506830660099}
   - component: {fileID: 7412853976341336722}
+  - component: {fileID: 7412853976341336723}
   m_Layer: 0
   m_Name: rightClosedCol
   m_TagString: Untagged
@@ -47341,6 +47238,7 @@ GameObject:
   - component: {fileID: 7128280787462370556}
   - component: {fileID: 7128280787462370555}
   - component: {fileID: 7128280787462370554}
+  - component: {fileID: 7128280787462370557}
   m_Layer: 0
   m_Name: leftHingeInteractable (1)
   m_TagString: Untagged
@@ -47503,6 +47401,27 @@ MonoBehaviour:
   comboLock: {fileID: 1136364663}
   doorObject: {fileID: 1733310323762628381}
   rotationLimits: {x: 15, y: 0, z: 0}
+--- !u!135 &7128280787462370557
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7128280787462370553}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000024
+  m_Center: {x: 0, y: 0, z: 6.5}
 --- !u!33 &7133324859840272466
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47788,6 +47707,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &7412853976341336723
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976551125137186147}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000024
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &7431941111232741585
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47921,6 +47861,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &7580482390936518056
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073757080062359820}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5000002
+  m_Center: {x: 0.000030517578, y: 0, z: 0.0000038146973}
 --- !u!33 &7606044039904293449
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47961,6 +47922,7 @@ GameObject:
   - component: {fileID: 7663972421772066841}
   - component: {fileID: 7663972421772066840}
   - component: {fileID: 7663972421772066839}
+  - component: {fileID: 7663972421772066842}
   m_Layer: 0
   m_Name: 'rightHingeInteractable '
   m_TagString: Untagged
@@ -48123,6 +48085,27 @@ MonoBehaviour:
   comboLock: {fileID: 1136364663}
   doorObject: {fileID: 8576602910584500944}
   rotationLimits: {x: 15, y: 0, z: 0}
+--- !u!135 &7663972421772066842
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7663972421772066838}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.50000024
+  m_Center: {x: 0, y: 0, z: 6.5}
 --- !u!4 &7666650174176434588
 Transform:
   m_ObjectHideFlags: 0
