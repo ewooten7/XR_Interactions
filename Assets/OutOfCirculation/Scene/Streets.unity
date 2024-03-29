@@ -43630,6 +43630,7 @@ GameObject:
   - component: {fileID: 5587892816048932389}
   - component: {fileID: 5706267000633754951}
   - component: {fileID: 1217662689631157856}
+  - component: {fileID: 5706267000633754952}
   m_Layer: 0
   m_Name: rightOpenCol
   m_TagString: Untagged
@@ -46255,6 +46256,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2624044521654291676}
   m_Mesh: {fileID: 5356747925979147266, guid: d36fb5410fec9854fbf81c50394c6469, type: 3}
+--- !u!135 &5706267000633754952
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624044521654291676}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5000002
+  m_Center: {x: -0.0000038146973, y: 0, z: 0}
 --- !u!1 &5794650001612589958
 GameObject:
   m_ObjectHideFlags: 0
@@ -46625,6 +46647,7 @@ GameObject:
   - component: {fileID: 1965318558457186595}
   - component: {fileID: 8251978189654706894}
   - component: {fileID: 7972142679195563373}
+  - component: {fileID: 8251978189654706895}
   m_Layer: 0
   m_Name: leftOpenCol
   m_TagString: Untagged
@@ -47401,6 +47424,9 @@ MonoBehaviour:
   comboLock: {fileID: 1136364663}
   doorObject: {fileID: 1733310323762628381}
   rotationLimits: {x: 15, y: 0, z: 0}
+  closedCollider: {fileID: 7580482390936518056}
+  openCollider: {fileID: 8251978189654706895}
+  endRotation: {x: 0, y: 0, z: 0}
 --- !u!135 &7128280787462370557
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -48085,6 +48111,9 @@ MonoBehaviour:
   comboLock: {fileID: 1136364663}
   doorObject: {fileID: 8576602910584500944}
   rotationLimits: {x: 15, y: 0, z: 0}
+  closedCollider: {fileID: 7412853976341336723}
+  openCollider: {fileID: 5706267000633754952}
+  endRotation: {x: 0, y: 0, z: 0}
 --- !u!135 &7663972421772066842
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -48945,6 +48974,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6390539015665497772}
   m_Mesh: {fileID: 5356747925979147266, guid: d36fb5410fec9854fbf81c50394c6469, type: 3}
+--- !u!135 &8251978189654706895
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390539015665497772}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5000002
+  m_Center: {x: 0.000015258789, y: 0, z: 0.0000038146973}
 --- !u!33 &8299792106450144801
 MeshFilter:
   m_ObjectHideFlags: 0

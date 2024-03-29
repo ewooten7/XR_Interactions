@@ -9,13 +9,18 @@ public class DoorInteractable : SimpleHingeInteractable
     [SerializeField] CombinationLock comboLock;
     [SerializeField] Transform doorObject;
     [SerializeField] Vector3 rotationLimits;
-    private Transform startRotation;
+    [SerializeField] Collider closedCollider;
+    private bool isClosed;
+    private Vector3 startRotation;
+    [SerializeField] Collider openCollider;
+    private bool isOpen;
+    [SerializeField] private Vector3 endRotation;
     private float startAngleX;
     protected override void Start()
     {
         base.Start();
-        startRotation = transform;
-        startAngleX = startRotation.localEulerAngles.x;
+        startRotation = transform.localEulerAngles;
+        startAngleX = startRotation.x;
         if (startAngleX >= 180)
         {
             startAngleX -= 360;
@@ -36,7 +41,7 @@ public class DoorInteractable : SimpleHingeInteractable
         UnlockHinge();
     }
 
-    // Update is called once per frame
+    // Update is called once per frame 
     protected override void Update()
     {
         base.Update();
@@ -56,6 +61,8 @@ public class DoorInteractable : SimpleHingeInteractable
     }
     private void CheckLimits()
     {
+        isClosed = false;
+        isOpen = false;
         float localAngleX = transform.localEulerAngles.x;
 
         if (localAngleX >= 180)
@@ -66,16 +73,40 @@ public class DoorInteractable : SimpleHingeInteractable
             localAngleX <= startAngleX - rotationLimits.x)
         {
             ReleaseHinge();
+
         }
     }
-
     protected override void ResetHinge()
     {
-        transform.localEulerAngles = new Vector3(
-            startAngleX,
-            transform.localEulerAngles.y,
-            transform.localEulerAngles.z
-        );
+        if (isClosed)
+        {
+            transform.localEulerAngles = startRotation;
+        }
+        else if(isOpen)
+        {
+            transform.localEulerAngles = endRotation;
+        }
+        else
+        {
+            transform.localEulerAngles = new Vector3(
+                startAngleX,
+                transform.localEulerAngles.y,
+                transform.localEulerAngles.z);
+        }
+
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other == closedCollider)
+        {
+            isClosed = true;
+            ReleaseHinge();
+        }
+        else if(other == openCollider)
+        {
+            isOpen = true;
+            ReleaseHinge();
+        }
     }
 }
 
