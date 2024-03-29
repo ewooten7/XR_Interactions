@@ -7721,6 +7721,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  positionLimits: {x: 0, y: 0, z: 0}
   isLocked: 0
 --- !u!1001 &334459227
 PrefabInstance:
@@ -47497,9 +47498,11 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  isLocked: 1
+  positionLimits: {x: 0.15, y: 0, z: 0}
+  isLocked: 0
   comboLock: {fileID: 1136364663}
   doorObject: {fileID: 1733310323762628381}
+  rotationLimits: {x: 15, y: 0, z: 0}
 --- !u!33 &7133324859840272466
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -48115,9 +48118,11 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  isLocked: 1
+  positionLimits: {x: 0.15, y: 0, z: 0}
+  isLocked: 0
   comboLock: {fileID: 1136364663}
   doorObject: {fileID: 8576602910584500944}
+  rotationLimits: {x: 15, y: 0, z: 0}
 --- !u!4 &7666650174176434588
 Transform:
   m_ObjectHideFlags: 0
