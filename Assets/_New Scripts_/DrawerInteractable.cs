@@ -11,8 +11,8 @@ public class DrawerInteractable : XRGrabInteractable
     [SerializeField] GameObject keyIndicatorLight;
     [SerializeField] bool isLocked;
     private Transform parentTransform;
-    private const string defaultLayer = "Default";
-    private const string grabLayer = "Grab";
+    private const string Default_Layer = "Default";
+    private const string Grab_Layer = "Grab";
     private bool isGrabbed;
     private Vector3 limitPositions;
     [SerializeField] float drawerLimitZ = 0.8f;
@@ -30,15 +30,15 @@ public class DrawerInteractable : XRGrabInteractable
     private void OnDrawerLocked(SelectExitEventArgs arg0)
     {
         isLocked = true;
-        if(keyIndicatorLight != null)
-        {
-            keyIndicatorLight.SetActive(false);
-        }
         Debug.Log("****DRAWER LOCKED");
     }
     private void OnDrawerUnlocked(SelectEnterEventArgs arg0)
     {
         isLocked = false;
+        if(keyIndicatorLight != null)
+        {
+            keyIndicatorLight.SetActive(false);
+        }
         Debug.Log("****DRAWER UNLOCKED");
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
@@ -51,13 +51,13 @@ public class DrawerInteractable : XRGrabInteractable
         }
         else
         {
-            ChangeLayerMask(defaultLayer);
+            ChangeLayerMask(Default_Layer);
         }
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);        
-        ChangeLayerMask(grabLayer);   
+        ChangeLayerMask(Grab_Layer);   
         isGrabbed = false; 
         transform.localPosition = drawerTransform.localPosition;
     }
@@ -78,18 +78,18 @@ public class DrawerInteractable : XRGrabInteractable
         if(transform.localPosition.x >= limitPositions.x + limitDistances.x ||
             transform.localPosition.x <= limitPositions.x - limitDistances.x)
         {
-            ChangeLayerMask(defaultLayer);
+            ChangeLayerMask(Default_Layer);
         }
         else if(transform.localPosition.y >= limitPositions.y + limitDistances.y ||
             transform.localPosition.y <= limitPositions.y - limitDistances.y)
         {
-            ChangeLayerMask(defaultLayer);
+            ChangeLayerMask(Default_Layer);
         }
         else if(drawerTransform.localPosition.z <= limitPositions.z - limitDistances.z)
         {
             isGrabbed = false;
             drawerTransform.localPosition = limitPositions;
-            ChangeLayerMask(defaultLayer);
+            ChangeLayerMask(Default_Layer);
         }
         else if(drawerTransform.localPosition.z >= drawerLimitZ + limitDistances.z)
         {
@@ -99,7 +99,7 @@ public class DrawerInteractable : XRGrabInteractable
                 drawerTransform.localPosition.y,
                 drawerLimitZ
             );
-            ChangeLayerMask(defaultLayer);
+            ChangeLayerMask(Default_Layer);
         }
     }
 
