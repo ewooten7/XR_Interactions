@@ -42080,7 +42080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &348478791953173364
 Transform:
   m_ObjectHideFlags: 0
@@ -42687,7 +42687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1222152992223872940
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45168,7 +45168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4495009482621166426
 Transform:
   m_ObjectHideFlags: 0
@@ -45993,7 +45993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!33 &5469181826444828559
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47498,7 +47498,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  positionLimits: {x: 0.15, y: 0, z: 0}
+  positionLimits: {x: 0.15, y: 0.03, z: 0}
   isLocked: 0
   comboLock: {fileID: 1136364663}
   doorObject: {fileID: 1733310323762628381}
@@ -48118,7 +48118,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  positionLimits: {x: 0.15, y: 0, z: 0}
+  positionLimits: {x: 0.15, y: 0.03, z: 0}
   isLocked: 0
   comboLock: {fileID: 1136364663}
   doorObject: {fileID: 8576602910584500944}

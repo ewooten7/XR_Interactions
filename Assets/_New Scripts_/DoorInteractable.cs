@@ -11,12 +11,12 @@ public class DoorInteractable : SimpleHingeInteractable
     [SerializeField] Vector3 rotationLimits;
     private Transform startRotation;
     private float startAngleX;
-    protected override void Start() 
+    protected override void Start()
     {
         base.Start();
         startRotation = transform;
         startAngleX = startRotation.localEulerAngles.x;
-        if(startAngleX >= 180)
+        if (startAngleX >= 180)
         {
             startAngleX -= 360;
         }
@@ -49,7 +49,7 @@ public class DoorInteractable : SimpleHingeInteractable
             );
         }
 
-        if(isSelected)
+        if (isSelected)
         {
             CheckLimits();
         }
@@ -62,16 +62,20 @@ public class DoorInteractable : SimpleHingeInteractable
         {
             localAngleX -= 360;
         }
-        if(localAngleX >= startAngleX + rotationLimits.x ||
+        if (localAngleX >= startAngleX + rotationLimits.x ||
             localAngleX <= startAngleX - rotationLimits.x)
         {
             ReleaseHinge();
-            transform.localEulerAngles = new Vector3(
-                startAngleX,
-                transform.localEulerAngles.y,
-                transform.localEulerAngles.z
-            );
         }
+    }
+
+    protected override void ResetHinge()
+    {
+        transform.localEulerAngles = new Vector3(
+            startAngleX,
+            transform.localEulerAngles.y,
+            transform.localEulerAngles.z
+        );
     }
 }
 
