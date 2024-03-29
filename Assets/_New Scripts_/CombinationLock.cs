@@ -5,9 +5,15 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class CombinationLock : MonoBehaviour
 {
+//Lock and Unlock UnityActions
+    public UnityAction UnlockAction;
+    private void OnUnlocked() => UnlockAction?.Invoke();
+    public UnityAction LockAction;
+    private void OnLocked() => LockAction?.Invoke();   
     [SerializeField] TMP_Text userInputText;
     [SerializeField] XRButtonInteractable[] comboButtons;
     [SerializeField] TMP_Text infoText;
@@ -92,6 +98,7 @@ public class CombinationLock : MonoBehaviour
     private void UnlockCombo()
     {
         isLocked = false;
+        OnUnlocked();
         lockedPanel.color = unlockedColor;
         lockedText.text = unlockedString;
         if (isResettable)
@@ -102,6 +109,7 @@ public class CombinationLock : MonoBehaviour
     private void LockCombo()
     {
         isLocked = true;
+        OnLocked();
         lockedPanel.color = lockedColor;
         lockedText.text = lockedString;
         infoText.text = startString;
