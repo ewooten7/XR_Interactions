@@ -70,30 +70,35 @@ public class TheWall : MonoBehaviour
             {
                 socketPosition = 0;
             }
-            if (wallCubes[socketPosition] != null)
-            {
-                Vector3 position = wallCubes[socketPosition].transform.position;
-                DestroyImmediate(wallCubes[socketPosition]);
-                wallCubes[socketPosition] = Instantiate(socketWallPrefab, position, transform.rotation);
-                tempColumn.SetCube(wallCubes[socketPosition]);
-                if (socketPosition == 0)
-                {
-                    wallCubes[socketPosition].transform.SetParent(transform);
-                }
-                else
-                {
-                    wallCubes[socketPosition].transform.SetParent(wallCubes[0].transform);
-                }
-                wallSocket = wallCubes[socketPosition].GetComponentInChildren<XRSocketInteractor>();
-                if (wallSocket != null)
-                {
-                    wallSocket.selectEntered.AddListener(OnSocketEnter);
-                    wallSocket.selectExited.AddListener(OnSocketExited);
-                }
-            }
+            AddSocketWall(tempColumn);
+
 
         }
         generatedColumn.Add(tempColumn);
+    }
+    private void AddSocketWall(GeneratedColumn socketedColumn)
+    {
+        if (wallCubes[socketPosition] != null)
+        {
+            Vector3 position = wallCubes[socketPosition].transform.position;
+            DestroyImmediate(wallCubes[socketPosition]);
+            wallCubes[socketPosition] = Instantiate(socketWallPrefab, position, transform.rotation);
+            socketedColumn.SetCube(wallCubes[socketPosition]);
+            if (socketPosition == 0)
+            {
+                wallCubes[socketPosition].transform.SetParent(transform);
+            }
+            else
+            {
+                wallCubes[socketPosition].transform.SetParent(wallCubes[0].transform);
+            }
+            wallSocket = wallCubes[socketPosition].GetComponentInChildren<XRSocketInteractor>();
+            if (wallSocket != null)
+            {
+                wallSocket.selectEntered.AddListener(OnSocketEnter);
+                wallSocket.selectExited.AddListener(OnSocketExited);
+            }
+        }
     }
     private void OnSocketExited(SelectExitEventArgs arg0)
     {
@@ -126,9 +131,20 @@ public class TheWall : MonoBehaviour
             buildWall = false;
             BuildWall();
         }
+        if (deleteWall)
+        {
+            deleteWall = false;
+            for (int i = 0; i < generatedColumn.Count; i++)
+            {
+                generatedColumn[i].DeleteColumn();
+            }
+            if (generatedColumn.Count > 0)
+            {
+                generatedColumn.Clear();
+            }
+        }
     }
 }
-
 
 [System.Serializable]
 public class GeneratedColumn
@@ -167,5 +183,16 @@ public class GeneratedColumn
                 break;
             }
         }
+    }
+    public void DeleteColumn()
+    {
+        for (int i = 0; i < wallCubes.Length; i++)
+        {
+            if (wallCubes[i] != null)
+            {
+                Object.DestroyImmediate(wallCubes[i]);
+            }
+        }
+        wallCubes = new GameObject[0];
     }
 }
