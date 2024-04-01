@@ -1,16 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Events;
 
 [ExecuteAlways]
 public class TheWall : MonoBehaviour
 {
+    public UnityEvent OnDestroy;
     [SerializeField] int columns;
     [SerializeField] int rows;
     [SerializeField] GameObject wallCubePrefab;
     [SerializeField] GameObject socketWallPrefab;
     [SerializeField] int socketPosition = 1;
     [SerializeField] XRSocketInteractor wallSocket;
+    [SerializeField] ExplosiveDevice explosiveDevice;
     [SerializeField] List<GeneratedColumn> generatedColumn;
     GameObject[] wallCubes;
     [SerializeField] float cubeSpacing = 0.005f;
@@ -26,6 +29,10 @@ public class TheWall : MonoBehaviour
         {
             wallSocket.selectEntered.AddListener(OnSocketEnter);
             wallSocket.selectExited.AddListener(OnSocketExited);
+        }
+        if(explosiveDevice != null)
+        {
+            explosiveDevice.OnDetonated.AddListener(OnDestroyWall);
         }
     }
     private void BuildWall()
@@ -121,10 +128,21 @@ public class TheWall : MonoBehaviour
         {
             for (int i = 0; i < generatedColumn.Count; i++)
             {
+                generatedColumn[i].ActivateColumn();
+            }
+        }  
+    }
+    private void OnDestroyWall()
+    {
+         if (generatedColumn.Count >= 1)
+        {
+            for (int i = 0; i < generatedColumn.Count; i++)
+            {
                 int power = Random.Range(maxPower / 2, maxPower);
                 generatedColumn[i].DestroyColumn(power);
             }
         }
+        OnDestroy?.Invoke();   
     }
 
     // Update is called once per frame
@@ -228,6 +246,17 @@ public class GeneratedColumn
             }
         }
     }
+    public void ActivateColumn()
+    {
+        for (int i = 0; i < wallCubes.Length; i++)
+        {
+            if (wallCubes[i] != null)
+            {
+                Rigidbody rb = wallCubes[i].GetComponent<Rigidbody>();
+                rb.isKinematic = false;
+            }
+        }
+    }
     public void ResetColumn()
     {
         for (int i = 0; i < wallCubes.Length; i++)
@@ -240,3 +269,4 @@ public class GeneratedColumn
         }
     }
 }
+
