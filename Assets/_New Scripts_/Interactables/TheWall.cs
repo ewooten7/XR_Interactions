@@ -23,6 +23,8 @@ public class TheWall : MonoBehaviour
     [SerializeField] bool deleteWall;
     [SerializeField] bool destroyWall;
     [SerializeField] int maxPower;
+    [SerializeField] AudioClip destroyWallClip;
+    public AudioClip GetDestroyClip => destroyWallClip; 
     void Start()
     {
         if (wallSocket != null)
