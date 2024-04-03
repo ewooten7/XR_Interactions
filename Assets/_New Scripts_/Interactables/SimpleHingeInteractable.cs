@@ -45,7 +45,7 @@ public abstract class SimpleHingeInteractable : XRSimpleInteractable
         {
             base.OnSelectEntered(args);
             grabHand = args.interactorObject.transform;
-            OnHingeSelected!.Invoke(this); 
+            OnHingeSelected?.Invoke(this);
         }
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
