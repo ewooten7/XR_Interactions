@@ -34509,22 +34509,12 @@ MonoBehaviour:
   grabActivatedClip: {fileID: 8300000, guid: a7d20e9f23bd7cc449823e482e098902, type: 3}
   wandActivatedClip: {fileID: 8300000, guid: d25fe85513f40c84ab3cb0499b949c08, type: 3}
   drawer: {fileID: 5469181826444828563}
-  drawerSocket: {fileID: 0}
-  drawerSound: {fileID: 0}
-  drawerSocketSound: {fileID: 0}
-  drawerMoveClip: {fileID: 0}
-  drawerSocketClip: {fileID: 0}
   cabinetDoors:
   - {fileID: 7128280787462370556}
   - {fileID: 7663972421772066841}
-  cabinetDoorSound: []
-  cabinetDoorMoveClip: {fileID: 0}
+  comboLock: {fileID: 1136364663}
   wall: {fileID: 1916334224}
-  wallSocket: {fileID: 0}
-  wallSound: {fileID: 0}
-  wallSocketSound: {fileID: 0}
-  destroyWallClip: {fileID: 8300000, guid: 79f0548b92e2b2c48a00514b4f9aa04a, type: 3}
-  wallSocketClip: {fileID: 0}
+  wallSound: {fileID: 2076848918}
   fallBackClip: {fileID: 0}
 --- !u!1001 &1029099316
 PrefabInstance:
@@ -38974,6 +38964,9 @@ MonoBehaviour:
   isResettable: 1
   comboValues: 070000000400000003000000
   inputValues: 000000000000000000000000
+  lockComboClip: {fileID: 8300000, guid: a7d20e9f23bd7cc449823e482e098902, type: 3}
+  unlockComboClip: {fileID: 8300000, guid: dff3014fa4e23374685962fafb39949f, type: 3}
+  comboButtonPressedClip: {fileID: 8300000, guid: 3ee7355195eed7545a2e29565f52a2d8, type: 3}
 --- !u!1001 &1138383120
 PrefabInstance:
   m_ObjectHideFlags: 0
