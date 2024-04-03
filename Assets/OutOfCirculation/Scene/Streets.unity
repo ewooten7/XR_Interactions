@@ -34514,6 +34514,11 @@ MonoBehaviour:
   drawerSocketSound: {fileID: 0}
   drawerMoveClip: {fileID: 0}
   drawerSocketClip: {fileID: 0}
+  cabinetDoors:
+  - {fileID: 7128280787462370556}
+  - {fileID: 7663972421772066841}
+  cabinetDoorSound: []
+  cabinetDoorMoveClip: {fileID: 0}
   wall: {fileID: 1916334224}
   wallSocket: {fileID: 0}
   wallSound: {fileID: 0}
@@ -71472,8 +71477,12 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  OnHingeSelected:
+    m_PersistentCalls:
+      m_Calls: []
   positionLimits: {x: 0.15, y: 0.03, z: 0.15}
   isLocked: 0
+  hingeMoveClip: {fileID: 0}
   OnOpen:
     m_PersistentCalls:
       m_Calls:
@@ -81476,8 +81485,12 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  OnHingeSelected:
+    m_PersistentCalls:
+      m_Calls: []
   positionLimits: {x: 0.15, y: 0.03, z: 0}
   isLocked: 0
+  hingeMoveClip: {fileID: 8300000, guid: a9111467000a3ba4aa985d1aa06805c1, type: 3}
   OnOpen:
     m_PersistentCalls:
       m_Calls: []
@@ -82234,8 +82247,12 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  OnHingeSelected:
+    m_PersistentCalls:
+      m_Calls: []
   positionLimits: {x: 0.15, y: 0.03, z: 0}
   isLocked: 0
+  hingeMoveClip: {fileID: 8300000, guid: a9111467000a3ba4aa985d1aa06805c1, type: 3}
   OnOpen:
     m_PersistentCalls:
       m_Calls: []
