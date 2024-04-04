@@ -7,27 +7,26 @@ using System;
 
 public class SimpleUIControl : MonoBehaviour
 {
-    [SerializeField] XRButtonInteractable startButton;
-    [SerializeField] string[] msgStrings;
+    [SerializeField] ProgressControl progressControl;
     [SerializeField] TMP_Text[] msgTexts;
 
-    [SerializeField] GameObject keyIndicatorLight;
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        if(startButton != null)
+        if (progressControl != null)
         {
-            startButton.selectEntered.AddListener(StartButtonPressed);
+            progressControl.OnStartGame.AddListener(StartGame);
+            progressControl.OnChallengeComplete.AddListener(ChallengeComplete); 
         }
     }
 
-    private void StartButtonPressed(SelectEnterEventArgs arg0)
+    private void ChallengeComplete(string arg0)
     {
-        SetText(msgStrings[1]); 
-        if(keyIndicatorLight != null)
-        {
-            keyIndicatorLight.SetActive(true);
-        }
+        SetText(arg0);
+    }
+
+    private void StartGame(string arg0)
+    {
+        SetText(arg0);
     }
 
     public void SetText(string msg)
