@@ -24,6 +24,7 @@ public class XRAudioManager : MonoBehaviour
     [Header("Drawer Interactable")]
     [SerializeField] DrawerInteractable drawer;
     XRSocketInteractor drawerSocket;
+    XRPhysicsButtonInteractable drawerPhysicsButton;
     AudioSource drawerSound;
     AudioSource drawerSocketSound;
     AudioClip drawerMoveClip;
@@ -69,12 +70,16 @@ public class XRAudioManager : MonoBehaviour
         {
             fallBackClip = AudioClip.Create(FallBackClip_Name, 1, 1, 1000, true);
         }
+
         SetGrabbables();
+
         if (drawer != null)
         {
             SetDrawerInteractable();
         }
+
         cabinetDoorSound = new AudioSource[cabinetDoors.Length];
+
         for (int i = 0; i < cabinetDoors.Length; i++)
         {
             if (cabinetDoors[i] != null)
@@ -91,6 +96,47 @@ public class XRAudioManager : MonoBehaviour
             SetWall();
         }
     }
+    private void OnDisable()
+    {
+        if (progressControl != null)
+        {
+            progressControl.OnStartGame.RemoveListener(StartGame);
+            progressControl.OnChallengeComplete.RemoveListener(ChallengeComplete);
+        }
+        for (int i = 0; i < grabInteractables.Length; i++)
+        {
+            grabInteractables[i].selectEntered.RemoveListener(OnSelectEnterGrabbable);
+            grabInteractables[i].selectExited.RemoveListener(OnSelectExitGrabbable);
+            grabInteractables[i].activated.RemoveListener(OnActivatedGrabbable);
+        }
+        if (drawer != null)
+        {
+            drawer.selectEntered.RemoveListener(OnDrawerMove);
+            drawer.selectExited.RemoveListener(OnDrawerStop);
+            drawer.OnDrawerDetach.RemoveListener(OnDrawerDetach);
+        }
+
+        for (int i = 0; i < cabinetDoors.Length; i++)
+        {
+            cabinetDoors[i].OnHingeSelected.RemoveListener(OnDoorMove);
+            cabinetDoors[i].selectExited.RemoveListener(OnDoorStop);
+        }
+        if (comboLock != null)
+        {
+            comboLock.UnlockAction -= OnComboUnlocked;
+            comboLock.LockAction -= OnComboLocked;
+            comboLock.ComboButtonPressed -= OnComboButtonPressed;
+        }
+
+        if (wall != null)
+        {
+            wall.OnDestroy.RemoveListener(OnDestroyWall);
+        }
+        if (wallSocket != null)
+        {
+            wallSocket.selectEntered.RemoveListener(OnWallSocketed);
+        }
+    }
 
     private void ChallengeComplete(string arg0)
     {
@@ -100,7 +146,6 @@ public class XRAudioManager : MonoBehaviour
             progressSound.Play();
         }
     }
-
     private void StartGame(string arg0)
     {
         if (!startAudioBool)
@@ -141,6 +186,7 @@ public class XRAudioManager : MonoBehaviour
         drawerSound.loop = true;
         drawer.selectEntered.AddListener(OnDrawerMove);
         drawer.selectExited.AddListener(OnDrawerStop);
+        drawer.OnDrawerDetach.AddListener(OnDrawerDetach);
         drawerSocket = drawer.GetKeySocket;
         if (drawerSocket != null)
         {
@@ -150,11 +196,15 @@ public class XRAudioManager : MonoBehaviour
             drawerSocketSound.clip = drawerSocketClip;
             drawerSocket.selectEntered.AddListener(OnDrawerSocketed);
         }
+        drawerPhysicsButton = drawer.GetPhysicsButton;
+        if (drawerPhysicsButton != null)
+        {
+            drawerPhysicsButton.OnBaseEnter.AddListener(OnPhysicsButtonEnter);
+            drawerPhysicsButton.OnBaseExit.AddListener(OnPhysicsButtonExit);
+        }
     }
-    private void OnDrawerSocketed(SelectEnterEventArgs arg0)
-    {
-        drawerSocketSound.Play();
-    }
+
+
     private void SetCabinetDoors(int index)
     {
         cabinetDoorSound[index] = cabinetDoors[index].transform
@@ -256,6 +306,26 @@ public class XRAudioManager : MonoBehaviour
     {
         drawerSound.Play();
     }
+    private void OnDrawerDetach()
+    {
+        drawerSound.Stop();
+    }
+    private void OnPhysicsButtonExit()
+    {
+        grabSound.clip = keyClip;
+        grabSound.Play();
+    }
+
+    private void OnPhysicsButtonEnter()
+    {
+        grabSound.clip = keyClip;
+        grabSound.Play();
+    }
+
+    private void OnDrawerSocketed(SelectEnterEventArgs arg0)
+    {
+        drawerSocketSound.Play();
+    }
     private void OnActivatedGrabbable(ActivateEventArgs arg0)
     {
         GameObject tempGameObject = arg0.interactableObject.transform.gameObject;
@@ -293,11 +363,5 @@ public class XRAudioManager : MonoBehaviour
             wallSound.Play();
         }
     }
-    private void OnDisable()
-    {
-        if (wall != null)
-        {
-            wall.OnDestroy.RemoveListener(OnDestroyWall);
-        }
-    }
+
 }
