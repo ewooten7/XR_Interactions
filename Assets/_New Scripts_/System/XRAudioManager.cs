@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-public class XRAudioManager : MonoBehaviour
+public class XrAudioManager : MonoBehaviour
 {
     [Header("Progress Control")]
     [SerializeField] ProgressControl progressControl;
@@ -25,6 +25,7 @@ public class XRAudioManager : MonoBehaviour
     [SerializeField] DrawerInteractable drawer;
     XRSocketInteractor drawerSocket;
     XRPhysicsButtonInteractable drawerPhysicsButton;
+    private bool isDetached;
     AudioSource drawerSound;
     AudioSource drawerSocketSound;
     AudioClip drawerMoveClip;
@@ -304,10 +305,18 @@ public class XRAudioManager : MonoBehaviour
     }
     private void OnDrawerMove(SelectEnterEventArgs arg0)
     {
-        drawerSound.Play();
+        if (isDetached)
+        {
+            PlayGrabSound();
+        }
+        else
+        {
+            drawerSound.Play();
+        }       
     }
     private void OnDrawerDetach()
     {
+        isDetached = true;
         drawerSound.Stop();
     }
     private void OnPhysicsButtonExit()
@@ -341,8 +350,7 @@ public class XRAudioManager : MonoBehaviour
     }
     private void OnSelectExitGrabbable(SelectExitEventArgs arg0)
     {
-        grabSound.clip = grabClip;
-        grabSound.Play();
+        PlayGrabSound();
     }
     private void OnSelectEnterGrabbable(SelectEnterEventArgs arg0)
     {
@@ -363,5 +371,9 @@ public class XRAudioManager : MonoBehaviour
             wallSound.Play();
         }
     }
-
+    private void PlayGrabSound()
+    {
+        grabSound.clip = grabClip;
+        grabSound.Play();
+    }
 }

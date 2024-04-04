@@ -18,6 +18,14 @@ public class ProgressControl : MonoBehaviour
     [SerializeField] DrawerInteractable drawer;
     XRSocketInteractor drawerSocket;
 
+    [Header("Combo Lock")]
+    [SerializeField] CombinationLock comboLock;
+
+    [Header("The Wall")]
+    [SerializeField] TheWall wall;
+    XRSocketInteractor wallSocket;
+    [SerializeField] GameObject teleportationAreas;
+
     [Header("Challenge Settings")]
     [SerializeField] string startGameString;
     [SerializeField] string[] challengeStrings;
@@ -33,15 +41,26 @@ public class ProgressControl : MonoBehaviour
         }
         OnStartGame?.Invoke(startGameString);
         SetDrawerInteractable();
+        if (comboLock != null)
+        {
+            comboLock.UnlockAction += OnComboUnlocked;
+        }
+        if (wall != null)
+        {
+            SetWall();
+        }
     }
+
+
+
     private void ChallengeComplete()
     {
-        challengeNumber ++;
-        if(challengeNumber < challengeStrings.Length)
+        challengeNumber++;
+        if (challengeNumber < challengeStrings.Length)
         {
             OnChallengeComplete?.Invoke(challengeStrings[challengeNumber]);
         }
-        else if(challengeNumber >= challengeStrings.Length)
+        else if (challengeNumber >= challengeStrings.Length)
         {
             //****ALL CHALLENGES COMPLETE
         }
@@ -63,11 +82,11 @@ public class ProgressControl : MonoBehaviour
     }
     private void SetDrawerInteractable()
     {
-        if(drawer != null)
+        if (drawer != null)
         {
             drawer.OnDrawerDetach.AddListener(OnDrawerDetach);
-            drawerSocket  = drawer.GetKeySocket;
-            if(drawerSocket != null)
+            drawerSocket = drawer.GetKeySocket;
+            if (drawerSocket != null)
             {
                 drawerSocket.selectEntered.AddListener(OnDrawerSocketed);
             }
@@ -83,4 +102,32 @@ public class ProgressControl : MonoBehaviour
     {
         ChallengeComplete();
     }
+    private void OnComboUnlocked()
+    {
+        ChallengeComplete();
+    }
+    private void SetWall()
+    {
+        wall.OnDestroy.AddListener(OnDestroyWall);
+        wallSocket = wall.GetWallSocket;
+        if (wallSocket != null)
+        {
+            wallSocket.selectEntered.AddListener(OnWallSocketed);
+        }
+    }
+
+    private void OnWallSocketed(SelectEnterEventArgs arg0)
+    {
+        ChallengeComplete();
+    }
+
+    private void OnDestroyWall()
+    {
+        ChallengeComplete();
+        if(teleportationAreas != null)
+        {
+            teleportationAreas.SetActive(true);
+        }
+    }
 }
+
