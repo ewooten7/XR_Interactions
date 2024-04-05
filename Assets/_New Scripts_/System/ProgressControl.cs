@@ -25,6 +25,9 @@ public class ProgressControl : MonoBehaviour
     [SerializeField] TheWall wall;
     XRSocketInteractor wallSocket;
     [SerializeField] GameObject teleportationAreas;
+        
+    [Header("Library")]
+    [SerializeField] SimpleSliderControl librarySlider;
 
     [Header("Challenge Settings")]
     [SerializeField] string startGameString;
@@ -49,9 +52,16 @@ public class ProgressControl : MonoBehaviour
         {
             SetWall();
         }
+        if(librarySlider != null)
+        {
+            librarySlider.OnSliderActive.AddListener(LibrarySliderActive);
+        }
     }
 
-
+    private void LibrarySliderActive()
+    {
+        ChallengeComplete();
+    }
 
     private void ChallengeComplete()
     {
@@ -130,4 +140,3 @@ public class ProgressControl : MonoBehaviour
         }
     }
 }
-
