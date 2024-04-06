@@ -16,7 +16,7 @@ public class SimpleSliderControl : MonoBehaviour
 
     private void OnEnable()
     {
-        slider = GetComponent<Slider>();
+        slider = GetComponent<Slider>(); 
         slider.minValue = minValue;
         slider.maxValue = maxValue;
         slider.value = minValue;
@@ -31,7 +31,7 @@ public class SimpleSliderControl : MonoBehaviour
     {
         if (arg0 >= maxValue)
         {
-            OnSliderActive!.Invoke();
+            OnSliderActive?.Invoke();
         }
         if (libraryLight != null)
         {
