@@ -37829,6 +37829,8 @@ MonoBehaviour:
   comboLock: {fileID: 1136364663}
   wall: {fileID: 1916334224}
   wallSound: {fileID: 2076848918}
+  joystick: {fileID: 332176080}
+  robot: {fileID: 4133074852929045847}
   backgroundMusic: {fileID: 1756492615}
   backgroundMusicClip: {fileID: 8300000, guid: 05e7b4c0f2b9bc947841b51337f4d5b9, type: 3}
   fallBackClip: {fileID: 0}
@@ -45297,7 +45299,9 @@ MonoBehaviour:
   wall: {fileID: 1916334224}
   teleportationAreas: {fileID: 743075657}
   librarySlider: {fileID: 757981589}
+  robot: {fileID: 4133074852929045847}
   startGameString: Press Start button to enable Key Indicator Light
+  endGameString: Level Complete! Congrats!
   challengeStrings:
   - Find the Key to unlock the dresser. Press Start button to enable Key Indicator
     Light.
@@ -45307,6 +45311,9 @@ MonoBehaviour:
   - Pick up Explosive Device and insert into the correct Wall Socket
   - Find Wand and Fire Projective at Explosive Device to Destroy Wall
   - Enter Library and use UI Slider to Activate the lights.
+  - Find the Joystick to control the Robot to destroy 10 Wall Cubes
+  wallCubesToDestroy: 0
+  challengeNumber: 0
 --- !u!4 &1216728733
 Transform:
   m_ObjectHideFlags: 0
@@ -84111,6 +84118,7 @@ MonoBehaviour:
   OnDestroyWallCube:
     m_PersistentCalls:
       m_Calls: []
+  collisionClip: {fileID: 8300000, guid: 79f0548b92e2b2c48a00514b4f9aa04a, type: 3}
 --- !u!1 &4160123934986218447
 GameObject:
   m_ObjectHideFlags: 0

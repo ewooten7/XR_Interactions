@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-public class XrAudioManager : MonoBehaviour
+public class XRAudioManager : MonoBehaviour
 {
     [Header("Progress Control")]
     [SerializeField] ProgressControl progressControl;
@@ -53,6 +53,16 @@ public class XrAudioManager : MonoBehaviour
     AudioClip destroyWallClip;
     AudioClip wallSocketClip;
 
+    [Header("Joystick Interactable")]
+    [SerializeField] SimpleHingeInteractable joystick;
+    private AudioSource joystickSound;
+    private AudioClip joystickClip;    
+
+    [Header("The Robot")]
+    [SerializeField] NavMeshRobot robot;
+    private AudioSource destroyWallCubeSound;
+    private AudioClip destroyWallCubeClip;
+
     [Header("Local Audio Settings")]
     [SerializeField] private AudioSource backgroundMusic;
     [SerializeField] private AudioClip backgroundMusicClip;
@@ -96,7 +106,49 @@ public class XrAudioManager : MonoBehaviour
         {
             SetWall();
         }
+        if(joystick != null)
+        {
+            SetJoystick();
+        }
+        if(robot != null)
+        {
+            SetRobot();
+        }
     }
+
+    private void SetRobot()
+    {
+        destroyWallCubeSound = robot.transform.AddComponent<AudioSource>();
+        destroyWallCubeClip = robot.GetCollisionClip();
+        destroyWallCubeSound.clip = destroyWallCubeClip;
+        robot.OnDestroyWallCube.AddListener(OnDestroyWallCube);
+    }
+
+    private void OnDestroyWallCube()
+    {
+        destroyWallCubeSound.Play();
+    }
+
+    private void SetJoystick()
+    {
+        joystickClip = joystick.GetHingeMoveClip;
+        joystickSound = joystick.transform.AddComponent<AudioSource>();
+        joystickSound.clip = joystickClip;
+        joystickSound.loop = true;
+        joystick.OnHingeSelected.AddListener(JoystickMove);
+        joystick.selectExited.AddListener(JoystickExited);
+    }
+
+    private void JoystickExited(SelectExitEventArgs arg0)
+    {
+        joystickSound.Stop();
+    }
+
+    private void JoystickMove(SimpleHingeInteractable arg0)
+    {
+        joystickSound.Play();
+    }
+
     private void OnDisable()
     {
         if (progressControl != null)
@@ -374,3 +426,4 @@ public class XrAudioManager : MonoBehaviour
         grabSound.Play(); 
     }
 }
+
