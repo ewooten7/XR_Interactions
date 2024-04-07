@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BackgroundCamera
   - Key
+  - WallCube
   layers:
   - Default
   - TransparentFX
