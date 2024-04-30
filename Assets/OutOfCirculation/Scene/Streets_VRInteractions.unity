@@ -14608,13 +14608,13 @@ Transform:
   - {fileID: 241206215}
   - {fileID: 605027480}
   - {fileID: 2689590575300238965}
-  - {fileID: 1749088488}
   - {fileID: 633814714443832341}
   - {fileID: 88160943589167090}
   - {fileID: 633814712707374324}
   - {fileID: 8085759024019829058}
   - {fileID: 5783065163967012471}
   - {fileID: 6215127519227822580}
+  - {fileID: 1749088488}
   m_Father: {fileID: 2133225792}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &394314917
@@ -66172,6 +66172,10 @@ PrefabInstance:
     - target: {fileID: 5030734267259534324, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
       propertyPath: m_Name
       value: Hand Menu With Button Activation
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030734267259534324, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5030734267259534325, guid: e2698219e3231e94c8765d49b9dd5cff, type: 3}
       propertyPath: m_RootOrder
